@@ -1,0 +1,31 @@
+# Configuration for Dogs vs. Cats SVM Classifier
+
+# Data paths
+TRAIN_PATH: "dataset/train/train"
+TEST_PATH: "dataset/test1/test"
+OUTPUT_PATH: "output/"
+
+# Image processing
+IMAGE:
+  SIZE: [64, 64]
+  MAX_SAMPLES: 2000
+  RANDOM_SEED: 42
+
+# HOG Features
+HOG:
+  ORIENTATIONS: 9
+  PIXELS_PER_CELL: [8, 8]
+  CELLS_PER_BLOCK: [2, 2]
+  VISUALIZE: false
+
+# SVM Model
+SVM:
+  KERNEL: "rbf"
+  C: 1.0
+  GAMMA: "scale"
+  PROBABILITY: true
+
+# Training
+TRAINING:
+  TEST_SIZE: 0.2
+  CROSS_VAL_FOLDS: 5
